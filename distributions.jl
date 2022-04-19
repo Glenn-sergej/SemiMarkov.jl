@@ -479,10 +479,10 @@ minimum(dst::Lognormal) = zero(dst.θ)
 maximum(dst::Lognormal) = (Inf)unit(dst.θ)
 
 
-xv(dst::Lognormal, z::Real) = dst.μ * z ^ (1 / dst.σ)
-quantile(dst::Lognormal, p::Real)  = xv(dst, -log1p(-p))
-cquantile(dst::Lognormal, p::Real) = xv(dst, -log(p))
-sojourn(dst::Lognormal,dφ::Number,tol::Real) = 0.0unit(dφ):dφ:cquantile(dst,tol) 
+# xv(dst::Lognormal, z::Real) = dst.μ * z ^ (1 / dst.σ)
+# quantile(dst::Lognormal, p::Real)  = xv(dst, -log1p(-p))
+# cquantile(dst::Lognormal, p::Real) = xv(dst, -log(p))
+# sojourn(dst::Lognormal,dφ::Number,tol::Real) = 0.0unit(dφ):dφ:cquantile(dst,tol) 
 
 
 function pdf(dst::Lognormal, x::Number)

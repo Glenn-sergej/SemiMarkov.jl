@@ -22,7 +22,7 @@ State transtion diagram of the example of application: reliability of downhole o
 
 StateTrans = [1 1; 1 2; 2 1; 2 3; 3 1; 3 4]
 
-Settings = Dict("T" => 9000, "dT" => 6, "states" => 4, "trans" => size(StateTrans,1))
+Settings = Dict("T" => 9000, "dT" => 2, "states" => 4, "trans" => size(StateTrans,1))
 Init = [1.0,0.0,0.0,0.0]
 
 t = 0:Settings["dT"]:Settings["T"];
