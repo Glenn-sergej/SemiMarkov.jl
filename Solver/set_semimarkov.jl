@@ -24,7 +24,7 @@ function set_semimarkov(Settings, StateTransProb, StateTrans, t, dst)
     return C, dC, F
 end
 
-function replace_nan(x)
+function replace_nan!(x)
     for i = eachindex(x)
         if isnan(x[i])
             x[i] = 0
